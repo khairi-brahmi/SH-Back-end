@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "Delete" %}{% endblock %}
+
+
+{% block content %}
+<br>
+<div class="container p-10">
+        <div class="row justify-content-center">
+                <div class="col-xm-12 col-sm-10 col-md-10 col-lg-8">
+                    <div class="shadow bg-white rounded">
+                        <div class="card-body hadow bg-white rounded">
+                            <h3 class="card-title text-center">{% trans "Confirmation" %}</h3>
+                            <form method="POST" enctype="multipart/form-data">
+                                <p> Are you sure you want to delete "{{ object }}"?</p>
+                              {% csrf_token %}
+                              {{ form | crispy }}
+                               <button type="submit" class="btn btn-block btn-danger btn-rounded">{% trans "Confirm" %}</button>
+
+                              </form>
+                          </div>
+
+                </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+{% endblock %}

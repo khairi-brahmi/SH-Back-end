@@ -1,0 +1,56 @@
+{#{% extends "main/base.html" %}#}
+{#{% load i18n %}#}
+{% extends 'base.html' %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+{% block breadcrumb %}{% endblock breadcrumb %}
+
+{% block content %}
+  <div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          {% block heading %}
+            {% if not title %}
+              <h3 class="card-title">
+                {% trans "Form" %}
+              </h3>
+
+            {% else %}
+              <h3 class="card-title">
+                {{ title }}
+              </h3>
+
+            {% endif %}
+          {% endblock heading %}
+
+          <!--begin::Form-->
+          <form onsubmit="{% trans 'Save' %}.disabled = true; return true;" id="yourFormId" class="form"
+                action=""
+                method="POST" enctype="multipart/form-data">
+            <div class="kt-portlet__body">
+              {% csrf_token %}
+              {#                        {{ form|crispy }}#}
+              {% crispy form %}
+              <div class="div">
+                <input class="submitBtn btn btn-primary" type="submit" value="{% trans 'Save' %}"/>
+                {% if cancelurl %}
+                  <a class="btn btn-default" href="{{ cancelurl }}">{% trans "Cancel" %}</a>
+                {% else %}
+                  <a class="btn btn-default"
+                     href="{% url 'compta:home' %}">{% trans "Cancel" %}</a>
+                {% endif %}
+              </div>
+            </div>
+          </form>
+          <!--end::Form-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
+
+
