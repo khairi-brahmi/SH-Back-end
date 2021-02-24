@@ -11,7 +11,7 @@ SECRET_KEY = env(
     default="Dkezw673nLdltbGHJSFCTknm8uoN1JyBhF0LFobaxPgBqUMIMAj3oshPsJdjvULO",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["localhost","192.168.42.48", "0.0.0.0","khairi.herokuapp.com/", "127.0.0.1","172.23.0.1","192.168.42.89","192.168.42.7"]
+ALLOWED_HOSTS = ["localhost","192.168.42.48", "0.0.0.0","khairiapp.herokuapp.com", "127.0.0.1","172.23.0.1","192.168.42.89","192.168.42.7"]
 
 # CACHES
 # ------------------------------------------------------------------------------
