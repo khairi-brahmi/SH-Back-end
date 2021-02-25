@@ -14,7 +14,6 @@ aniso8601==8.0.0
 apispec==3.3.1
 apispec-webframeworks==0.5.2
 appdirs==1.4.4
-APScheduler==0.0.0
 arrow==0.15.7
 artifacts==20190320
 asciitree==0.3.3
