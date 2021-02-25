@@ -1,1 +1,1 @@
-web: gunicorn BACK-END.wsgi
+web: gunicorn Social Help.wsgi
