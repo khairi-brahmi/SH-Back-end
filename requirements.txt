@@ -38,7 +38,6 @@ bs4==0.0.1
 cachetools==4.2.1
 cairocffi==0.9.0
 capstone==3.0.5
-catfish==1.4.13
 cbor==1.0.0
 certifi==2020.6.20
 cffi==1.14.3
